@@ -1,11 +1,63 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ¡Meta description añadida! -->
+    <meta name="description" content="Ejemplo de página estructurada con HTML semántico, mostrando artículo principal y barra lateral.">
     <title>Tienda De Cultivo Let´s Grow</title>
+    <style>
+        /* Estilos adaptados a etiquetas semánticas */
+        body { font-family: sans-serif; }
+        header, footer { background-color: #f2f2f2; padding: 10px; margin-bottom: 15px; }
+        header nav ul { list-style: none; padding: 0; }
+        header nav li { display: inline; margin-right: 10px; }
+        /* Contenedor opcional para flex layout si es necesario */
+        .main-container { display: flex; gap: 20px; margin-bottom: 15px;}
+        main { flex-grow: 1; } /* main ocupa el espacio disponible */
+        article { border: 1px solid #ccc; padding: 15px; }
+        aside { width: 200px; border: 1px solid #eee; padding: 15px; background-color: #fafafa; }
+        footer { text-align: center; font-size: 0.9em; }
+    </style>
 </head>
 <body>
-    <h1>Let´s Grow</h1>
-    <p>Lorem Ipsum</p>
+
+    <header>
+        <h1>Let´sGrowTiendaDeCultivo</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <main> 
+            <article>
+                <h2>Título Principal del Artículo</h2>
+                <p>Este es el párrafo principal del contenido más importante de la página. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Otro párrafo con más detalles interesantes sobre el tema.</p>
+            </article>
+        </main>
+
+        <aside>
+            <h3>Enlaces Relacionados</h3>
+            <ul>
+                <li><a href="#">Productos Similares</a></li>
+                <li><a href="#">Asesorías</a></li>
+                <li><a href="#">Más Contenido</a></li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p><a href="#privacidad">Política de Privacidad</a></p>
+    </footer>
+
 </body>
 </html>
