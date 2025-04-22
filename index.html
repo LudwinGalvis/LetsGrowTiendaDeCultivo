@@ -1,119 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ¡Meta description añadida! -->
-    <meta name="description"
-        content="Ejemplo de página estructurada con HTML semántico, mostrando artículo principal y barra lateral.">
-    <title>Tienda De Cultivo Let´s Grow</title>
-    <style>
-        /* Estilos adaptados a etiquetas semánticas */
-        body {
-            font-family: sans-serif;
-        }
+    <title>Let's Grow - AutoCultivemos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add Font Awesome for icons (replace with your preferred icon library if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- You might need specific fonts - add Google Fonts links here if identified -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-        header,
-        footer {
-            background-color: #f2f2f2;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
-
-        header nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        header nav li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        /* Contenedor opcional para flex layout si es necesario */
-        .main-container {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 15px;
-        }
-
-        main {
-            flex-grow: 1;
-        }
-
-        /* main ocupa el espacio disponible */
-        article {
-            border: 1px solid #ccc;
-            padding: 15px;
-        }
-
-        aside {
-            width: 200px;
-            border: 1px solid #eee;
-            padding: 15px;
-            background-color: #fafafa;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-        }
-    </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Let´  Grow Tienda De Cultivo</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <!-- Header Section -->
+    <header class="site-header">
+        <nav class="container navbar">
+            <a href="#" class="logo">
+                <img src="https://via.placeholder.com/40x40?text=LG" alt="Let's Grow Logo Placeholder">
+                <span>Aprendemos de las Plantas.</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Accesorios Para Stoner <i class="fas fa-chevron-down fa-xs"></i></a>
+                    <!-- Add dropdown menu structure here if needed -->
+                    <!-- <ul class="dropdown-content">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="#">Más</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a> <!-- Example icon -->
+                <a href="#"><i class="fas fa-user"></i></a>   <!-- Example icon -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <div class="main-container">
+    <!-- Main Content -->
+    <main>
 
-        <main>
-            <article>
-                <h2>Nuestra Empresa ¿Quiénes Somos?</h2>
-                <p><strong>MISIÓN :</strong>
-                    <br>
-                    <br>
-                    Ofrecer a los Cultivadores y Principiantes en jardinería, los productos y servicios de calidad que necesitan
-                    para así lograr el Éxito en sus Proyectos de Cultivo y disfrutar la experiencia de <strong>Autocultivar</strong>
-                </p>
-                <p><strong>VISIÓN :</strong>
-                    <br>
-                    <br>
-                    Con seguridad, para el <strong>2029</strong>, ser reconocidos por nuestra pasión por el Cultivo, nuestro
-                    compromiso con la Calidad y el Servicio. Además, convertir nuestra <strong>Tienda Virtual</strong> en el sitio
-                    ideal para los
-                    <strong>Cultivadores</strong> y <strong>Entusiastas</strong> de la Jardinería.
-                </p>
-                <p>Otro párrafo con más detalles interesantes sobre el tema.</p>
-            </article>
-        </main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <!-- Background images/elements would go here via CSS -->
+            </div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Let's Grow</h1>
+                    <p>Productos orgánicos y ecologicos para el Autocultivo, de fácil acceso y de la más Alta calidad</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-outline">Explorar</a>
+                        <a href="#" class="video-link">
+                            <i class="fas fa-play-circle"></i> Video Inicio
+                        </a>
+                    </div>
+                    <div class="review-card">
+                        <img src="https://via.placeholder.com/50" alt="Alena Patel Avatar" class="avatar">
+                        <div class="review-content">
+                            <h4>alena Patel</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i> <!-- Example rating -->
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-feature">
+                    <div class="feature-card">
+                        <img src="https://via.placeholder.com/300x200?text=Cannabis+Leaf" alt="Colorful Cannabis Leaf">
+                        <div class="feature-text">
+                           <span class="feature-label"></span> <!-- Optional label spot -->
+                            <h2>Purple Punch-Seeds Stockers</h2>
+                            <p>Características del Esqueje</p>
+                            <a href="#" class="btn btn-primary">Cotizar Ahora</a>
+                        </div>
+                         <div class="slider-dots">
+                             <span class="dot active"></span>
+                             <span class="dot"></span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <aside>
-            <h3>LO MÁS VENDIDO</h3>
-            <ul>
-                <li><a href="#">Kits de Autocultivo</a></li>
-                <li><a href="#">Kits de Fertilizantes</a></li>
-                <li><a href="#">Kits Control de Hongos y Plagas</a></li>
-            </ul>
-        </aside>
+        <!-- Featured Seeds Section -->
+        <section class="featured-seeds section-padding">
+            <div class="container">
+                <h2 class="section-title">La Mejor Elección Para Tu Cultivo</h2>
+                <div class="seeds-grid">
+                    <div class="seed-card">
+                        <img src="https://via.placeholder.com/300x150?text=Seeds" alt="Cannabis Seeds" class="seed-image">
+                        <div class="seed-content">
+                            <h3>Semillas Feminizadas</h3>
+                            <p>Te facilitamos diferentes sepas de Semillería trabajada</p>
+                            <div class="price-info">
+                                <span>Desde $ 20.000 COPS</span>
+                                <button class="icon-btn"><i class="fas fa-info-circle"></i></button> <!-- Placeholder icon -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seed-card">
+                         <img src="img/variedad1.png" alt="Cannabis Bud" class="seed-image">
+                        <div class="seed-content">
+                            <h3>Semillas Automaticas</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                            <div class="price-info">
+                                <span>Desde $ 20.000 COPS</span>
+                                <div>
+                                    <a href="#" class="btn btn-outline-small">Explore</a>
+                                    <button class="icon-btn"><i class="fas fa-shopping-cart"></i></button> <!-- Placeholder icon -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    </div>
+        <!-- Variety Selection Section -->
+        <section class="variety-selection section-padding">
+            <div class="container">
+                <h2 class="section-title">Selecciona Una Variedad</h2>
+                <div class="variety-grid">
+                    <!-- Repeat this card structure for each product -->
+                    <article class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=Garlic+Budder" alt="Garlic Budder Plant">
+                        <h3>Garlic Budder</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <div class="product-footer">
+                            <span>$ 99.999 COPS</span>
+                            <button class="icon-btn"><i class="fas fa-plus-circle"></i></button> <!-- Placeholder icon -->
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=Knock+Out" alt="Knock Out Plant">
+                        <h3>Knock Out</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <div class="product-footer">
+                            <span>$ 50.000 COPS</span>
+                            <button class="icon-btn"><i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=Apples+Bananas" alt="Apples and Bananas Plant/Cactus">
+                        <h3>Apples and Bananas</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <div class="product-footer">
+                            <span>$ 99.999 COPS</span>
+                            <button class="icon-btn"><i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </article>
+                     <article class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=Dos+Sweet+Dos" alt="Dos Sweet Dos Plant">
+                        <h3>Dos Sweet Dos</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <div class="product-footer">
+                            <span>$ 50.000 COPS</span>
+                            <button class="icon-btn"><i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=Papaya+Pancakes" alt="Papaya Pancakes Plant">
+                        <h3>Papaya Pancakes</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <div class="product-footer">
+                            <span>$ 99.999 COPS</span>
+                             <button class="icon-btn"><i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </article>
+                     <article class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=Forbbident+Skittles" alt="Forbbident Skittles Plant">
+                        <h3>Forbbident Skittles</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <div class="product-footer">
+                            <span>$ 99.999 COPS</span>
+                            <button class="icon-btn"><i class="fas fa-plus-circle"></i></button>
+                        </div>
+                    </article>
+                    <!-- End card repetition -->
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>© 2025 letsgrowcol.com. Todos los derechos reservados.</p>
-        <p><a href="#privacidad">Política de Privacidad</a></p>
+        <!-- Best Sellers Section -->
+        <section class="best-sellers section-padding">
+            <div class="container">
+                <h2 class="section-title">Lo Más Vendido</h2>
+                <div class="seller-grid">
+                    <article class="seller-card">
+                        <img src="https://via.placeholder.com/60?text=Kit" alt="Kit Icon" class="seller-icon">
+                        <h3>Kits de Cultivo</h3>
+                         <!-- Add stars if needed -->
+                        <p>Pensados para facilitar el crecimiento y cuidado de las plantas y cultivos, en Interior o Mixto...</p>
+                    </article>
+                    <article class="seller-card">
+                         <img src="https://via.placeholder.com/60?text=Fert" alt="Fertilizer Icon" class="seller-icon">
+                        <h3>Kits de Fertilizantes</h3>
+                        <p>Tenemos disponibles Fertilizantes orgánicos y/o minerales; diseñados para proporcionar nutrientes esenciales...</p>
+                    </article>
+                    <article class="seller-card">
+                         <img src="https://via.placeholder.com/60?text=Pest" alt="Pest Control Icon" class="seller-icon">
+                        <h3>Kits Control Hongos y Plagas</h3>
+                        <p>Conjunto de productos y herramientas (Fungicidas-Insectisidas-Acaricidas y Biosidas) diseñados para prevenir y controlar...</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+         <!-- Cup Winners Section -->
+         <section class="cup-winners section-padding">
+            <div class="container">
+                 <h2 class="section-title">Ganadora De Copas</h2>
+                 <div class="winner-card">
+                     <img src="https://via.placeholder.com/300x300?text=Potted+Plant" alt="Award Winning Plant">
+                     <div class="winner-content">
+                         <h3>Tenemos las Mejores Selecciones de Esquejes de los Mejores Bancos de Semillas</h3>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                         <div class="winner-controls">
+                            <a href="#" class="btn btn-outline">Explorar</a>
+                             <div class="pagination">
+                                 <button class="arrow-btn"><i class="fas fa-chevron-left"></i></button>
+                                 <span>01/04</span>
+                                 <button class="arrow-btn"><i class="fas fa-chevron-right"></i></button>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                   <div class="slider-dots bottom-dots">
+                       <span class="dot active"></span>
+                       <span class="dot"></span>
+                       <span class="dot"></span>
+                  </div>
+             </div>
+         </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer-bottom">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                 <a href="#" class="logo footer-logo">
+                    <img src="https://via.placeholder.com/50x50?text=AC" alt="AutoCultivemos Logo Placeholder">
+                    <span>AutoCultivemos</span>
+                 </a>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                 <div class="social-links">
+                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> FB</a>
+                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> TW</a>
+                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LI</a>
+                 </div>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Tipos de Plantas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <!-- Add more links as needed -->
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h4>Entérate de Nuestras Ofertas</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Ingresa Tú E-Mail" required>
+                    <button type="submit" class="btn btn-primary">SUSCRIBETE</button>
+                </form>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>www.letsgrowcol.com &copy; Todos los derechos reservados</p>
+        </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
-
 </html>
