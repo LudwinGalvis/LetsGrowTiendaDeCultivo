@@ -350,6 +350,7 @@ button {
     text-align: center;
     backdrop-filter: blur(5px);
     position: relative; /* For slider dots positioning */
+    padding-top: 120px;
 }
 
 .feature-card img {
@@ -357,7 +358,11 @@ button {
     margin-bottom: 20px;
     width: 100%;
     aspect-ratio: 3 / 2; /* Maintain aspect ratio */
-    object-fit: cover;
+    object-fit: contain;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .feature-text h2 {
@@ -393,20 +398,27 @@ button {
 .seeds-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 100px;
 }
 
 .seed-card {
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
-    overflow: hidden; /* Keep image corners rounded */
+    /* overflow: hidden; */ /* Keep image corners rounded */
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding-top: 150px;
 }
 .seed-card .seed-image {
-    width: 100%;
-    height: 200px; /* Adjust height as needed */
-    object-fit: cover;
+    width: 80%;
+    height: auto; /* Adjust height as needed */
+    max-height: 300px;
+    object-fit: contain;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .seed-content {
@@ -710,7 +722,11 @@ button {
     .hero-feature {
         order: 1; /* Feature above text */
         margin-bottom: 40px;
+        margin-top: 100px;
         width: 70%; /* Make feature card larger */
+    }
+    .hero-feature .feature-card{
+        padding-top: 140px;
     }
     .review-card {
         margin: 0 auto; /* Center review card */
@@ -769,6 +785,9 @@ button {
     }
     .hero-feature {
         width: 90%;
+    }
+    .hero-feature .feature-card img{
+        width: 75%;
     }
     .variety-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
